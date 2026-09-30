@@ -71,3 +71,19 @@ Para visualizar y analizar el comportamiento dinámico del circuito de potencia 
 
    char ssid[] = "NOMBRE_DE_TU_RED_WIFI";
    char pass[] = "CONTRASEÑA_DE_TU_RED";
+   
+Conecta tu ESP32 por USB y sube el firmware.
+
+### 3. Montaje del Hardware
+Ensamble el circuito de potencia siguiendo el esquema de Falstad.
+
+Conecta el pin D4 del ESP32 a la entrada de la resistencia de Gate (100 Ω).
+
+Conecta las tierras comunes (GND) de todo el sistema.
+
+Energiza la fuente de 12 V y conecta el ESP32 por USB.
+
+Desplaza el slider en Blynk para regular la velocidad del motor en tiempo real.
+
+##💡 ¿Por qué un módulo discreto en lugar de uno comercial?
+Se prefirió diseñar un circuito propio por motivos didácticos, de eficiencia, costo y seguridad. Muchos módulos comerciales económicos utilizan MOSFETs no optimizados para nivel lógico (3.3 V), provocando que operen en zona lineal, se sobrecalienten y quemen el componente. Un diseño a medida permite la selección precisa de partes, garantiza mayor eficiencia de conmutación y facilita el diagnóstico de fallos, actuando como un bloque confiable o "caja negra" para proyectos futuros.
